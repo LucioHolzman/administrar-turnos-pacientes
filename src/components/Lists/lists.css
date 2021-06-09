@@ -1,0 +1,24 @@
+.container-lists {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,35,9,1) 0%, rgba(255,0,0,1) 0%, rgba(0,9,255,1) 100%, rgba(84,84,90,1) 100%, rgba(0,198,255,1) 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.container-lists .container {
+    display: flex;
+    flex-direction: column;
+}
+.container-form {
+    width: 30%;
+}
+.container-appointment {
+    width: 30%;
+    color: white;
+}
+
+h2{
+    margin-bottom: 20px;
+}

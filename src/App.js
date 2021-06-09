@@ -6,6 +6,7 @@ const App = () => {
   return (
     <>
       <Lists/>
+      <p className="developer">Developed by: <b>Lucio Holzman</b></p>
     </>
   );
 }

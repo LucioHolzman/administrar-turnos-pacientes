@@ -1,12 +1,14 @@
+@media  screen and (min-width: 330px) {
 :root {
     --height: 100vh;
 }
 .container-lists {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,35,9,1) 0%, rgba(255,0,0,1) 0%, rgba(0,9,255,1) 100%, rgba(84,84,90,1) 100%, rgba(0,198,255,1) 100%);
-    width: 100vw;
     min-height: var(--height);
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .container-lists .container {
@@ -16,13 +18,14 @@
 }
 .container-form {
     height: var(--height);
-    width: 40%;
+    width: 90%;
 }
 
 .container-appointments {
     height: var(--height);
-    width: 40%;
+    width: 90%;
 }
+    
 .container-appointments .title {
     height: 10%;
     color: white;
@@ -47,4 +50,23 @@
 
 h2{
     margin-bottom: 20px;
+}
+
+.developer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-weight: 300;
+}
+}
+@media  screen and (min-width: 1024px) {
+    .container-form {
+        width: 40%;
+    }
+    
+    .container-appointments {
+        width: 40%;
+    }
+        
 }

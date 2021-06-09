@@ -16,14 +16,12 @@ const Lists = () => {
     const [appointments, setAppointments] = useState(lsAppointments);
 
     useEffect( () => {
-        let lsAppointments = JSON.parse(localStorage.getItem('appoinments'));
-
         if(lsAppointments) {
-            localStorage.setItem('appointments', JSON.stringify(appointments))
+            localStorage.setItem('appoinments', JSON.stringify(appointments))
         }else{
-            localStorage.setItem('appointments', JSON.stringify([]))
+            localStorage.setItem('appoinments', JSON.stringify([]))
         }
-    }, [appointments]);
+    }, [appointments, lsAppointments]);
  
     // Add Appointments
     const createAppointment = appointment => {
@@ -50,15 +48,17 @@ const Lists = () => {
                 />
             </div>
 
-            <div className="container container-appointment">
-                <h2>{title}</h2>
-                {appointments.map(appointment => (
-                <Appointment
-                key={appointment.id}
-                appointment={appointment}
-                deleteAppointment={deleteAppointment}
-                />
-                ))}
+            <div className="container container-appointments">
+            <h2 className="title">{title}</h2>
+                <div className="container-appointment">
+                    {appointments.map(appointment => (
+                    <Appointment
+                    key={appointment.id}
+                    appointment={appointment}
+                    deleteAppointment={deleteAppointment}
+                    />
+                    ))}
+                </div>
             </div>
         </div>
     </>

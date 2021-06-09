@@ -1,22 +1,48 @@
+:root {
+    --height: 100vh;
+}
 .container-lists {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,35,9,1) 0%, rgba(255,0,0,1) 0%, rgba(0,9,255,1) 100%, rgba(84,84,90,1) 100%, rgba(0,198,255,1) 100%);
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    min-height: var(--height);
     display: flex;
     justify-content: space-around;
-    padding: 50px;
 }
 .container-lists .container {
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 .container-form {
-    width: 30%;
+    height: var(--height);
+    width: 40%;
 }
-.container-appointment {
-    width: 30%;
+
+.container-appointments {
+    height: var(--height);
+    width: 40%;
+}
+.container-appointments .title {
+    height: 10%;
     color: white;
+}
+.container-appointments .container-appointment {
+    padding: 25px;
+    width: 100%;
+    overflow-y: scroll;
+}
+.container-appointments .container-appointment::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.container-appointments .container-appointment::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+.container-appointments .container-appointment::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 }
 
 h2{

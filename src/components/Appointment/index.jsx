@@ -2,6 +2,7 @@ import React from 'react';
 import './appointment.css';
 import PropTypes from 'prop-types';
 const Appointment = ({appointment: {firstname, lastname, dni, date, time, additionalobservation, id}, deleteAppointment}) => {
+   
     return (
         <>
             <div className="appointment">

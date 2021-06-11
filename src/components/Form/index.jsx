@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import uuid from 'uuid/dist/v4';
 import './form.css';
 const Form = ({createAppointment}) => {
-
     // Crear State
     const [appointment, setAppointment] = useState({
         firstname: '', 
@@ -29,12 +28,14 @@ const Form = ({createAppointment}) => {
     // Press confirm
     const submitAppointment = (e) => {
         e.preventDefault();
-
         // Validate
-        if(firstname.trim() === '' || lastname.trim() === '' || dni.trim() === '' || date.trim() === '' || time.trim() === '' || additionalobservation.trim() === ''){
-            setError(true)
+        Object.keys(appointment).forEach(elem => {
+            if(elem.trim() === ''){
+                setError(true);
+            }
             return;
-        }
+        })
+
 
         // Validate complete
         setError(false)
